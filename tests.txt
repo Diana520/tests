@@ -1,0 +1,633 @@
+case 1: give the list with the student object of age 21 or above and grade above 90 in java public class Student {
+
+  private String name;
+  private int age;
+  private int grade;
+  private boolean exceptional;
+  private boolean honorRoll;
+  private boolean passed;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public int getGrade() {
+    return grade;
+  }
+
+  public void setGrade(int grade) {
+    this.grade = grade;
+  }
+
+  public boolean isExceptional() {
+    return exceptional;
+  }
+
+  public void setExceptional(boolean exceptional) {
+    this.exceptional = exceptional;
+  }
+
+  public boolean isHonorRoll() {
+    return honorRoll;
+  }
+
+  public void setHonorRoll(boolean honorRoll) {
+    this.honorRoll = honorRoll;
+  }
+
+  public boolean isPassed() {
+    return passed;
+  }
+
+  public void setPassed(boolean passed) {
+    this.passed = passed;
+  }
+}
+ChatGPT
+Sure, here's an example of how you can filter a list of Student objects in Java to get those who are aged 21 or above and have a grade above 90:
+
+java
+Copy code
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> studentList = new ArrayList<>();
+        // Add student objects to the list
+
+        // Assuming you have a list of Student objects named studentList
+        List<Student> selectedStudents = new ArrayList<>();
+
+        for (Student student : studentList) {
+            if (student.getAge() >= 21 && student.getGrade() > 90) {
+                selectedStudents.add(student);
+            }
+        }
+
+        // Now 'selectedStudents' contains the students who are aged 21 or above and have a grade above 90
+        // You can do further operations with the selected students if needed
+    }
+}
+Remember to populate the studentList with actual Student objects before using the loop to filter them based on age and grade.
+
+
+
+
+User
+add student objects of age 21 or above and grade above 90 to the student list in java public class Student {
+
+  private String name;
+  private int age;
+  private int grade;
+  private boolean exceptional;
+  private boolean honorRoll;
+  private boolean passed;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public int getGrade() {
+    return grade;
+  }
+
+  public void setGrade(int grade) {
+    this.grade = grade;
+  }
+
+  public boolean isExceptional() {
+    return exceptional;
+  }
+
+  public void setExceptional(boolean exceptional) {
+    this.exceptional = exceptional;
+  }
+
+  public boolean isHonorRoll() {
+    return honorRoll;
+  }
+
+  public void setHonorRoll(boolean honorRoll) {
+    this.honorRoll = honorRoll;
+  }
+
+  public boolean isPassed() {
+    return passed;
+  }
+
+  public void setPassed(boolean passed) {
+    this.passed = passed;
+  }
+}
+ChatGPT
+Certainly! Here's an example of how you can create Student objects with different ages and grades, and then add those who are aged 21 or above and have a grade above 90 to the studentList:
+
+java
+Copy code
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> studentList = new ArrayList<>();
+
+        // Creating Student objects and adding them to the list
+        Student student1 = new Student();
+        student1.setName("Alice");
+        student1.setAge(20);
+        student1.setGrade(95);
+        studentList.add(student1);
+
+        Student student2 = new Student();
+        student2.setName("Bob");
+        student2.setAge(22);
+        student2.setGrade(85);
+        studentList.add(student2);
+
+        Student student3 = new Student();
+        student3.setName("Charlie");
+        student3.setAge(23);
+        student3.setGrade(92);
+        studentList.add(student3);
+
+        // Filtering students who are aged 21 or above and have a grade above 90
+        List<Student> selectedStudents = new ArrayList<>();
+
+        for (Student student : studentList) {
+            if (student.getAge() >= 21 && student.getGrade() > 90) {
+                selectedStudents.add(student);
+            }
+        }
+
+        // Now 'selectedStudents' contains the students who meet the criteria
+        // You can perform further operations with the selected students
+    }
+}
+Make sure to adjust the values and details of the Student objects according to your requirements.
+
+case 2:add student objects of age less than 21 and grade above 90 to the student list and add the additional field Exceptional = true to some of the student object selectively in java public class Student {
+
+         private String name;
+         private int age;
+         private int grade;
+         private boolean exceptional;
+         private boolean honorRoll;
+         private boolean passed;
+
+         public String getName() {
+           return name;
+         }
+
+         public void setName(String name) {
+           this.name = name;
+         }
+
+         public int getAge() {
+           return age;
+         }
+
+         public void setAge(int age) {
+           this.age = age;
+         }
+
+         public int getGrade() {
+           return grade;
+         }
+
+         public void setGrade(int grade) {
+           this.grade = grade;
+         }
+
+         public boolean isExceptional() {
+           return exceptional;
+         }
+
+         public void setExceptional(boolean exceptional) {
+           this.exceptional = exceptional;
+         }
+
+         public boolean isHonorRoll() {
+           return honorRoll;
+         }
+
+         public void setHonorRoll(boolean honorRoll) {
+           this.honorRoll = honorRoll;
+         }
+
+         public boolean isPassed() {
+           return passed;
+         }
+
+         public void setPassed(boolean passed) {
+           this.passed = passed;
+         }
+       }
+       ChatGPT
+       Sure, I can help you with that! Here's how you can achieve the task you described in Java:
+
+       java
+       Copy code
+       import java.util.ArrayList;
+       import java.util.List;
+
+       public class Main {
+           public static void main(String[] args) {
+               List<Student> studentList = new ArrayList<>();
+
+               // Create student objects and add them to the list
+               Student student1 = new Student();
+               student1.setName("John");
+               student1.setAge(19);
+               student1.setGrade(95);
+               student1.setHonorRoll(true);
+               student1.setPassed(true);
+
+               Student student2 = new Student();
+               student2.setName("Jane");
+               student2.setAge(20);
+               student2.setGrade(92);
+               student2.setHonorRoll(true);
+               student2.setPassed(true);
+
+               Student student3 = new Student();
+               student3.setName("Alice");
+               student3.setAge(18);
+               student3.setGrade(88);
+               student3.setHonorRoll(false);
+               student3.setPassed(true);
+
+               studentList.add(student1);
+               studentList.add(student2);
+               studentList.add(student3);
+
+               // Add the 'Exceptional' field selectively
+               for (Student student : studentList) {
+                   if (student.getAge() < 21 && student.getGrade() > 90) {
+                       student.setExceptional(true);
+                   }
+               }
+
+               // Print the student list with exceptional flag
+               for (Student student : studentList) {
+                   System.out.println("Name: " + student.getName());
+                   System.out.println("Age: " + student.getAge());
+                   System.out.println("Grade: " + student.getGrade());
+                   System.out.println("Exceptional: " + student.isExceptional());
+                   System.out.println("Honor Roll: " + student.isHonorRoll());
+                   System.out.println("Passed: " + student.isPassed());
+                   System.out.println();
+               }
+           }
+       }
+       This code creates three student objects, adds them to the list, and then selectively sets the 'Exceptional' field based on the given conditions. Finally, it prints out the details of each student along with their exceptional status.
+
+case 3:add student objects of of grade between 71 and 90 (inclusive)and add passed field to one of the student to the student list in java public class Student {
+
+         private String name;
+         private int age;
+         private int grade;
+         private boolean exceptional;
+         private boolean honorRoll;
+         private boolean passed;
+
+         public String getName() {
+           return name;
+         }
+
+         public void setName(String name) {
+           this.name = name;
+         }
+
+         public int getAge() {
+           return age;
+         }
+
+         public void setAge(int age) {
+           this.age = age;
+         }
+
+         public int getGrade() {
+           return grade;
+         }
+
+         public void setGrade(int grade) {
+           this.grade = grade;
+         }
+
+         public boolean isExceptional() {
+           return exceptional;
+         }
+
+         public void setExceptional(boolean exceptional) {
+           this.exceptional = exceptional;
+         }
+
+         public boolean isHonorRoll() {
+           return honorRoll;
+         }
+
+         public void setHonorRoll(boolean honorRoll) {
+           this.honorRoll = honorRoll;
+         }
+
+         public boolean isPassed() {
+           return passed;
+         }
+
+         public void setPassed(boolean passed) {
+           this.passed = passed;
+         }
+       }
+       ChatGPT
+       Sure, here's how you can create student objects with grades between 71 and 90 (inclusive) and add the "passed" field to one of the student objects in Java:
+
+       java
+       Copy code
+       import java.util.ArrayList;
+       import java.util.List;
+
+       public class Main {
+           public static void main(String[] args) {
+               List<Student> studentList = new ArrayList<>();
+
+               // Creating student objects and adding to the list
+               Student student1 = new Student();
+               student1.setName("John");
+               student1.setAge(18);
+               student1.setGrade(85); // Grade between 71 and 90
+               student1.setExceptional(false);
+               student1.setHonorRoll(true);
+               student1.setPassed(false);
+               studentList.add(student1);
+
+               Student student2 = new Student();
+               student2.setName("Emily");
+               student2.setAge(17);
+               student2.setGrade(75); // Grade between 71 and 90
+               student2.setExceptional(true);
+               student2.setHonorRoll(false);
+               student2.setPassed(true);
+               studentList.add(student2);
+
+               // Adding more student objects with grades between 71 and 90
+
+               // Adding the "passed" field to one student
+               studentList.get(0).setPassed(true);
+
+               // Displaying student information
+               for (Student student : studentList) {
+                   System.out.println("Name: " + student.getName());
+                   System.out.println("Age: " + student.getAge());
+                   System.out.println("Grade: " + student.getGrade());
+                   System.out.println("Exceptional: " + student.isExceptional());
+                   System.out.println("Honor Roll: " + student.isHonorRoll());
+                   System.out.println("Passed: " + student.isPassed());
+                   System.out.println();
+               }
+           }
+       }
+       In this example, I've created two student objects and added them to the studentList. One of the students (student1) initially had the "passed" field set to false, but I later updated it to true using the setPassed() method. You can follow a similar pattern to add more students to the list and manipulate their attributes as needed.
+
+
+
+
+       User
+       add student objects of of grade between 71 and 90 (inclusive)and set passed true to one of the student to the student list in java public class Student {
+
+         private String name;
+         private int age;
+         private int grade;
+         private boolean exceptional;
+         private boolean honorRoll;
+         private boolean passed;
+
+         public String getName() {
+           return name;
+         }
+
+         public void setName(String name) {
+           this.name = name;
+         }
+
+         public int getAge() {
+           return age;
+         }
+
+         public void setAge(int age) {
+           this.age = age;
+         }
+
+         public int getGrade() {
+           return grade;
+         }
+
+         public void setGrade(int grade) {
+           this.grade = grade;
+         }
+
+         public boolean isExceptional() {
+           return exceptional;
+         }
+
+         public void setExceptional(boolean exceptional) {
+           this.exceptional = exceptional;
+         }
+
+         public boolean isHonorRoll() {
+           return honorRoll;
+         }
+
+         public void setHonorRoll(boolean honorRoll) {
+           this.honorRoll = honorRoll;
+         }
+
+         public boolean isPassed() {
+           return passed;
+         }
+
+         public void setPassed(boolean passed) {
+           this.passed = passed;
+         }
+       }
+       ChatGPT
+       Certainly, here's how you can create student objects with grades between 71 and 90 (inclusive) and set the "passed" field to true for one of the student objects in Java:
+
+       java
+       Copy code
+       import java.util.ArrayList;
+       import java.util.List;
+
+       public class Main {
+           public static void main(String[] args) {
+               List<Student> studentList = new ArrayList<>();
+
+               // Create and add student objects with grades between 71 and 90 (inclusive)
+               studentList.add(createStudent("John", 18, 85, false, true));
+               studentList.add(createStudent("Emily", 17, 75, true, false));
+               studentList.add(createStudent("Michael", 19, 90, true, true));
+
+               // Set the "passed" field to true for one of the student objects
+               studentList.get(1).setPassed(true);
+
+               // Display student information
+               for (Student student : studentList) {
+                   System.out.println("Name: " + student.getName());
+                   System.out.println("Age: " + student.getAge());
+                   System.out.println("Grade: " + student.getGrade());
+                   System.out.println("Exceptional: " + student.isExceptional());
+                   System.out.println("Honor Roll: " + student.isHonorRoll());
+                   System.out.println("Passed: " + student.isPassed());
+                   System.out.println();
+               }
+           }
+
+           // Helper method to create a student object
+           private static Student createStudent(String name, int age, int grade, boolean exceptional, boolean honorRoll) {
+               Student student = new Student();
+               student.setName(name);
+               student.setAge(age);
+               student.setGrade(grade);
+               student.setExceptional(exceptional);
+               student.setHonorRoll(honorRoll);
+               return student;
+           }
+       }
+       In this example, the createStudent method is a helper function that creates a Student object with the provided attributes and returns it. You can create more student objects using this method and add them to the studentList. Additionally, the "passed" field is set to true for the second student object using the setPassed method.
+
+case 4:give the list with the student object of of grade 70 or less in java public class Student {
+
+         private String name;
+         private int age;
+         private int grade;
+         private boolean exceptional;
+         private boolean honorRoll;
+         private boolean passed;
+
+         public String getName() {
+           return name;
+         }
+
+         public void setName(String name) {
+           this.name = name;
+         }
+
+         public int getAge() {
+           return age;
+         }
+
+         public void setAge(int age) {
+           this.age = age;
+         }
+
+         public int getGrade() {
+           return grade;
+         }
+
+         public void setGrade(int grade) {
+           this.grade = grade;
+         }
+
+         public boolean isExceptional() {
+           return exceptional;
+         }
+
+         public void setExceptional(boolean exceptional) {
+           this.exceptional = exceptional;
+         }
+
+         public boolean isHonorRoll() {
+           return honorRoll;
+         }
+
+         public void setHonorRoll(boolean honorRoll) {
+           this.honorRoll = honorRoll;
+         }
+
+         public boolean isPassed() {
+           return passed;
+         }
+
+         public void setPassed(boolean passed) {
+           this.passed = passed;
+         }
+       }
+       ChatGPT
+       Sure, here's an example of how you can create a list of Student objects with a grade of 70 or less in Java:
+
+       java
+       Copy code
+       import java.util.ArrayList;
+       import java.util.List;
+
+       public class Main {
+           public static void main(String[] args) {
+               List<Student> students = new ArrayList<>();
+
+               // Creating and adding student objects
+               Student student1 = new Student();
+               student1.setName("Alice");
+               student1.setAge(18);
+               student1.setGrade(65);
+               student1.setExceptional(false);
+               student1.setHonorRoll(false);
+               student1.setPassed(true);
+               students.add(student1);
+
+               Student student2 = new Student();
+               student2.setName("Bob");
+               student2.setAge(17);
+               student2.setGrade(85);
+               student2.setExceptional(false);
+               student2.setHonorRoll(true);
+               student2.setPassed(true);
+               students.add(student2);
+
+               // Add more student objects here...
+
+               // Filter students with grade 70 or less
+               List<Student> lowGradeStudents = new ArrayList<>();
+               for (Student student : students) {
+                   if (student.getGrade() <= 70) {
+                       lowGradeStudents.add(student);
+                   }
+               }
+
+               // Print low grade students
+               System.out.println("Students with grade 70 or less:");
+               for (Student student : lowGradeStudents) {
+                   System.out.println("Name: " + student.getName() + ", Grade: " + student.getGrade());
+               }
+           }
+       }
+       This example demonstrates creating a Student class object, populating their attributes, and then filtering and printing the students with a grade of 70 or less. Remember to add more student objects to the list as needed.
+
+   case 5: didn't use chatGPT
+
+   case 6: didn't use chatGPT
+
+
